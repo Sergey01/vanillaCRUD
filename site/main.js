@@ -15,6 +15,11 @@ const populateTasks = function() {
         taskElem.innerText = task.text;
         taskElem.id = 'task'+task.id.toString();
         taskElem.complete = task.completed;
+
+        // add event listeners
+        taskElem.addEventListener('onmouseover', e => e.target.style.fontWeight = 'bold');
+        taskElem.addEventListener('onmouseout', e => e.target.style.fontWeight = 'normal');
+
         document.getElementById('tasks').append(taskElem);
 })};
 
