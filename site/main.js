@@ -11,11 +11,11 @@ completed: false
 
 const populateTasks = function() {
     tasksArr.forEach(task => {
-        const taskElem = createElement('div');
+        const taskElem = document.createElement('div');
         taskElem.innerText = task.text;
         taskElem.id = 'task'+task.id.toString();
         taskElem.complete = task.completed;
         document.getElementById('tasks').append(taskElem);
-};
+})};
 
 populateTasks();
