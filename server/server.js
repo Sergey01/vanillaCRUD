@@ -1,19 +1,21 @@
+const path = require('path');
+
 const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.status(200).sendFile('../site/index.html');
+    res.status(200).sendFile(path.join(__dirname, '../site/index.html'));
 });
 
-app.static('main.js', (req, res) => {
-    res.status(200).sendFile('../site/main.js');
+app.get('/main.js', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../site/main.js'));
 });
 
-app.static('styles.css', (req, res) => {
-    res.status(200).sendFile('../site/styles.css');
+app.get('/styles.css', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../site/styles.css'));
 });
 
-app.use( (req, res) => {
+app.use( (req, res, err) => {
     res.status(404).send('Page Not Found');
 });
 
