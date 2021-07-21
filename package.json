@@ -1,0 +1,21 @@
+{
+  "name": "vanillacrud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergey01/vanillaCRUD.git"
+  },
+  "author": "Sergey Zeygerman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergey01/vanillaCRUD/issues"
+  },
+  "homepage": "https://github.com/Sergey01/vanillaCRUD#readme"
+}
