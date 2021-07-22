@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-  "express": "^4.17.1"
+    "express": "^4.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
   "scripts": {
     "test": "nodemon server/server.js",
     "start": "node server/server.js"
