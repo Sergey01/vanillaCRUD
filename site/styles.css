@@ -16,3 +16,7 @@ div {
 .task button {
     float: right;
 }
+
+.complete-button {
+    min-width: 120px;
+}

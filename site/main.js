@@ -40,16 +40,21 @@ const populateTasks = function() {
 
         // create complete and delete buttons
         const completeButton = document.createElement('button');
+        completeButton.className = 'complete-button'
         completeButton.innerText = 'Complete';
         const deleteButton = document.createElement('button');
-        
+        deleteButton.className = 'delete-button'
         deleteButton.innerText = 'Delete';
+        
+        // add event listeners to complete and delete buttons
         completeButton.addEventListener('click', (e) => {
             if (!(taskElem.style.textDecoration === 'line-through red')) {
                 taskElem.style.textDecoration = 'line-through red';
+                taskElem.style.fontStyle = 'italic';
                 completeButton.innerText = 'Undo Complete';
             } else {
-                taskElem.style.textDecoration = 'none';
+                taskElem.style.textDecoration = 'revert';
+                taskElem.style.fontStyle = 'revert';
                 completeButton.innerText = 'Complete';
             }
         });
