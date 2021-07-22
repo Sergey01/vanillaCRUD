@@ -8,6 +8,11 @@ div {
 
 .task {
     border: 1px solid black;
-    width: clamp(200px, 50%, 500px);
+    width: 500px;
+    /* min-height: 50px; */
     margin: 3px;
+}
+
+.task button {
+    float: right;
 }
