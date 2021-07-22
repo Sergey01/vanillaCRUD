@@ -14,11 +14,12 @@ const populateTasks = function() {
         const taskElem = document.createElement('div');
         taskElem.innerText = task.text;
         taskElem.id = 'task'+task.id.toString();
+        taskElem.className = 'task';
         taskElem.complete = task.completed;
 
         // add event listeners
-        taskElem.addEventListener('onmouseover', e => e.target.style.fontWeight = 'bold');
-        taskElem.addEventListener('onmouseout', e => e.target.style.fontWeight = 'normal');
+        taskElem.addEventListener('mouseover', () => taskElem.style.fontWeight = 'bold');
+        taskElem.addEventListener('mouseout', e => taskElem.style.fontWeight = 'normal');
 
         document.getElementById('tasks').append(taskElem);
 })};

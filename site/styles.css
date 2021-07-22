@@ -1,3 +1,13 @@
 div {
-    border: 1px;
+    border: 1px solid black;
+}
+
+#tasks {
+    width: 550px;
+}
+
+.task {
+    border: 1px solid black;
+    width: clamp(200px, 50%, 500px);
+    margin: 3px;
 }
