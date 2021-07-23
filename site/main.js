@@ -1,1 +1,1 @@
-alert('Test');
+console.log('main.js hit')
