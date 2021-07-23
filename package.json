@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
