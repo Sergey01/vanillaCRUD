@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>404 - Page Not Found</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: blueviolet;
+      font-size: 3em;
+    }
+
+    div {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: yellow;
+      font-family: monospace;
+      animation:rotation 5s infinite linear;
+      transform-origin: center;
+      display: block;
+    }
+    
+    @keyframes rotation {
+  from {
+    transform-origin: center;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform-origin: center;
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+  </style>
+</head>
+<body>
+  <div>404 - Page Not Found</div>
+</body>
+</html>

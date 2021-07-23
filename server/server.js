@@ -1,4 +1,5 @@
 const path = require('path');
+const taskRouter = require('./taskRouter.js')
 
 const compression = require('compression');
 const express = require('express');
@@ -13,6 +14,8 @@ app.get('/', (req, res) => {
     res.status(200)
     .sendFile(path.join(__dirname, '../site/index.html'), {}, (err) => {if (err) return next(err)})
 });
+
+app.use('/tasks', taskRouter);
 
 app.get('/login', (req, res) => {
   res.status(200)
@@ -44,5 +47,8 @@ app.get('/styles.css', (req, res) => {
   .sendFile(path.join(__dirname, '../site/styles.css'), {}, (err)=> {if (err) return next(err)})
 });
 
+app.use(function (req, res, next) {
+  res.status(404).sendFile(path.join(__dirname, '../site/404.html'));
+})
 
 app.listen(PORT, ()=>console.log(`Listening on port: ${PORT}`));
