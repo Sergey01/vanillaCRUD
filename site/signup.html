@@ -4,10 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>vanillaCRUD Sign Up</title>
+  <style>
+    input {
+      display: block;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <h1>vanillaCRUD</h1>
   <h2>Sign Up Page</h2>
-  <form id="signUpForm" method="POST" action="signup"></form>
+  <form id="signUpForm" method="POST" action="signup">
+    <label for="emailAddress">Please enter your email address</label>
+    <input name="emailAddress" type="email" placeholder="Email Address" required>
+    <label for="password">Please choose a password with a minimum of 8 characters</label>
+    <input name="password" type="password" placeholder="Password" minlength="8" required>
+    <label for="verifyPassword">Please re-enter your password</label>
+    <input name="verifyPassword" type="password" placeholder="Retype Password" minlength="8" required>
+    <button type="submit">Sign Up</button>
+  </form>
 </body>
 </html>
