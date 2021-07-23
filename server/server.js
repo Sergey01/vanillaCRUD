@@ -2,10 +2,12 @@ const path = require('path');
 const taskRouter = require('./taskRouter.js')
 
 const compression = require('compression');
+const cookieParser = require('cookie-parser');
 const express = require('express');
 const app = express();
 
 app.use(compression());
+app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 
 const PORT = 8080;
@@ -16,6 +18,16 @@ app.get('/', (req, res) => {
 });
 
 app.use('/tasks', taskRouter);
+
+// The route below is for testing. Please remove.
+// app.get('/test/:testVar', (req, res, next) => {
+//   console.log(`req.params.testVar is ${req.params.testVar}`);
+//   const testString = '-APPENDED';
+//   console.log(`Appending ${testString} to ${req.params.testVar} and storing the result in req.test123, then calling next().`);
+//   console.log(`The next middleware will console.log the req.test123`);
+//   req.test123 = req.params.testVar + testString;
+//   next();
+// }, (req, res) => res.status(200).send(req.test123));
 
 app.get('/login', (req, res) => {
   res.status(200)
