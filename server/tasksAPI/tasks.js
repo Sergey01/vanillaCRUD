@@ -1,4 +1,4 @@
-const db = require('./db.js');
+const db = require('../controllers/db.js');
 
 const createTask = (req, res)=>next();
 const getTasks = (req, res)=>next();

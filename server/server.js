@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 const path = require('path');
-const taskRouter = require('./taskRouter.js')
+const taskRouter = require('./tasksAPI/taskRouter.js')
 
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
