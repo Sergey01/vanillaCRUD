@@ -5,11 +5,13 @@ const taskRouter = require('./tasksAPI/taskRouter.js')
 
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const express = require('express');
 const app = express();
 
 app.use(compression());
 app.use(cookieParser());
+app.use(session({session$ecret}))
 app.use(express.urlencoded({extended:false}));
 
 const PORT = 8080;
